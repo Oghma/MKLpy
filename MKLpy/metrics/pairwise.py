@@ -121,7 +121,7 @@ def monotone_disjunctive_kernel(X, T=None,  k=2):
     return K
 
 
-def conjunctive_kernel(M, k=2):
+def conjunctive_kernel(M, T=None, k=2):
     M = M.toarray() if issparse(M) else M
     M = ( M > 0) * 1.0
     R = co.matrix(M.T)
