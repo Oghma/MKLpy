@@ -75,8 +75,8 @@ def SSK_kernel(X, T=None, k=2):
 
 
 
-def disjunctive_kernel(X, k=2):
-    X, _ = check_X_T(X, None)
+def disjunctive_kernel(X, T=None, k=2):
+    X, T = check_X_T(X, T)
     X = (X > 0) * 1.0
     #print X.shape
     m, n = X.shape
