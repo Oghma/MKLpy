@@ -260,7 +260,7 @@ def cnf_kernel(M, d, c, T=None):
     return np.array(K)
 
 
-def monotone_cnf_kernel(M, d, c):
+def monotone_cnf_kernel(M, d, c, T=None):
     M = M.toarray() if issparse(M) else M
     M = ( M > 0) * 1.0
     R = co.matrix(M.T)
