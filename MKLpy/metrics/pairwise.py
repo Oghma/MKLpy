@@ -96,10 +96,10 @@ def disjunctive_kernel(X, T=None, k=2):
     return K
 
 
-def monotone_disjunctive_kernel(X, k=2):
+def monotone_disjunctive_kernel(X, T=None,  k=2):
     X = X.toarray() if issparse(X) else X
     #TODO: train/test
-    X, _ = check_X_T(X, None)
+    X, T = check_X_T(X, T)
 	#TODO: check warnings about binarization
     R = np.array((X.T > 0) * 1.0)
     n,m = R.shape
