@@ -141,10 +141,10 @@ def conjunctive_kernel(M, k=2):
     return np.array(K)
 
 
-def monotone_conjunctive_kernel(X, k=2):
+def monotone_conjunctive_kernel(X, T=None, k=2):
     X = X.toarray() if issparse(X) else X
     #TODO: train/test
-    #X, _ = check_X_T(X, None)
+    #X, T = check_X_T(X, T)
 	#TODO: check warnings about binarization
     X = np.array((X > 0) * 1.0)
 
